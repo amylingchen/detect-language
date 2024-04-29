@@ -15,6 +15,8 @@
  文本输入框：输入文字
 ### 右侧输出：
 #### 可以输出表格，文本 和报错结果
+![image](https://github.com/amylingchen/detect-language/assets/38561335/6d85bb5b-d219-48d9-9301-57fa55c9f0be)
+
 ## 后端(python+flask):基于flask 实现的后端应用程序
 3个文件：Textual.py ,router.py ,serializers.py
 ### Textual.py:主要实现该项目的逻辑功能
