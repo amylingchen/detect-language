@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Textual</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+
+</head>
+<style>
+    body{
+        margin: 0;
+    }
+    .header {
+        background-color: #ccdef1;
+        color: #111111;
+        padding: 10px 0;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        font-family: Calibri ;
+        font-weight:700;
+        font-size:22px;
+    }
+    .container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        font-family: Arial;
+    }
+
+    .left-pane{
+        width: 40%;
+        padding: 0 20px;
+    }
+    .right-pane {
+        flex: 1;
+        padding: 0 20px;
+    }
+    
+    .container1 {
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        box-sizing: border-box;
+        width: 100%;
+        margin-block: 0;
+        margin-inline: 0;
+        padding-block: 0;
+        padding-inline: 0;
+        background-color:#ffffff;
+        border-radius:6px;
+        margin: 0;
+        padding: 24px;
+    }
+    .custom-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #75b2f6;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+
+    }
+    .custom-textarea {
+        width: 500px;
+        height: 500px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        resize: vertical;
+    }
+    .table-list{
+        width: 100%;
+        text-align:left;
+        border-bottom:1px solid #dad7d7;
+        table-layout: auto;
+
+    }
+    .table-list  th {
+        padding: 10px 20px;
+
+        font-size:1.2em;
+        background-color: #fafafa;
+        color:#000000;
+        border-radius:6px
+    }
+    .table-list tr{
+        border-bottom:1px solid #cac7c7
+    }
+    .table-list  td {
+        padding: 10px 20px;
+        color:#000000;
+
+
+    }
+    .error{
+        padding: 10px 20px;
+        color: brown;
+        font-size: 18px;
+    }
+    .result_text{
+        padding: 10px 20px;
+        color: #277bbf;
+        font-size: 18px;
+    }
+    .searchtype{
+        padding: 10px 0px;
+        font-size: 16px;
+    }
+
+    .custom-type{
+        padding: 10px 20px;
+        font-size: 16px;
+        border-color: #ccdef1;
+        border-radius: 5px;
+        background: #ffffff;
+    }
+    .search input {
+    padding: 10px 10px;
+    width: 100px;
+    border:1px solid #d9d9d9;
+    background:#ffffff;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+/*.hidden {*/
+/*    display: none;*/
+/*}*/
+
+</style>
+<body>
+    <div class="header">
+        Language Detect
+    </div>
+    <div class="container">
+        <div class="left-pane">
+
+            <div class="container1" >
+                <div >operations:</div>
+                <div class="searchtype">
+                    <button class="custom-type"  onclick="cleanFile()" type="button" >clean text</button>
+                    <button class="custom-type"  onclick="separate()" type="button">separate to sentence</button>
+                    <button class="custom-type"  onclick="showSearchWord()" type="button">find Word</button>
+                    <button class="custom-type"  onclick="countWord()" type="button">count words</button>
+                    <button class="custom-type"  onclick="countCharacters()" type="button">count characters</button>
+                    <button class="custom-type"  onclick="dectectEnglish()" type="button">detect language </button>
+                </div>
+                <div >Enter text:</div>
+                <div style="padding: 10px 0px">
+                    <textarea class="custom-textarea" id="codeData" placeholder="Enter text"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="right-pane">
+            <div class="container1" >
+                <div class="search" id ='search_word' style="display: none">
+                    <label for="word_input" > search words : </label>
+                    <input id="word_input" type="text">
+                    <button class="custom-button"  onclick="findWord()" type="button">Search</button>
+                </div>
+                <div style="padding: 10px 10px;font-size: 18px ">Here is your result:</div>
+                <div style="font-size:1.2em; padding: 10px" id="count">Count (<span style="font-weight:bold;font-size: 20px;color: #111111"></span>)</div>
+                <table class="table-list" >
+                    <thead id="table-header">
+                    </thead>
+                    <tbody id="table-body">
+
+                    </tbody>
+                </table>
+                <div class="result" id ='result' >
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="functions.js">
+        var codeData=document.getElementById('codeData');
+
+        codeData.addEventListener('input',function (event){
+            var inputvalue =event.target.value;
+            codeData.value=inputvalue;
+        });
+
+        var word_input=document.getElementById('word_input');
+        var search_word=document.getElementById('search_word');
+        word_input.addEventListener('input',function (event){
+            var inputvalue =event.target.value;
+            word_input.value=inputvalue;
+        });
+        search_word.classList.add('hidden');
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+作业4
+
+it's
+Description: 
+Most (on-line) information is textual, there are many simple 
+storage/indexing/retrieval systems that are quite useful built from simple tools. 
+Here are some textual data tools that “glued” together are useful. 
+ 
+We will give you several “documents” in textual (all in UTF-8 character set) 
+format, note that you will need to “clean up” these documents to do some 
+processing. Documents will between a few characters to about 1000 characters in 
+length, there will be between 3 to 12 documents, in total.
+
+Given some text: - clean (remove pictures, non-text, most punctuation – keep the following…) - separate into sentences (you kept the common sentence ending punctuation .?!) - find individual words in sentences (tab, space separated) ,
+    index words within sentences (which document, where – could be an offset
+    or sentence number) - count length of words, number of words in sentences - show, search for given words - count frequency of individual characters (only a..z), need to change any
+   capital  letters to lower case.
+- try to determine if in English (or not)  -
+https://en.wikipedia.org/wiki/Letter_frequency -
+Recommended that this is done as on-line tool(s), bonus points if done on-line
+You will need to demo your program and explain your implementation
+All work submitted for evaluation MUST be your creation, however you are welcome
+to use references AS LONG as you cite your references, you may similarly use
+libraries and example code – PLEASE DO NOT just copy code or use libraries for
+complex functionality or substantial parts.

@@ -1,0 +1,9 @@
+A partir d'un texte : - nettoyer (enlever les images, le non-texte, la plupart des signes de ponctuation - garder ce qui suit...) 
+- séparer en phrases (vous avez gardé la ponctuation commune de fin de phrase ?!) 
+- trouver des mots individuels dans les phrases (tabulation, espacement), indexer les mots dans les phrases (quel document, où - peut être un numéro de décalage ou de phrase) 
+- compter la longueur des mots, le nombre de mots dans les phrases 
+- afficher, rechercher des mots donnés 
+- compter la fréquence des caractères individuels (seulement a..z), nécessité de changer les majuscules en minuscules. 
+- essayer de déterminer si le texte est en anglais (ou non)
+
+Traduit avec DeepL.com (version gratuite)

@@ -1,0 +1,26 @@
+This course serves as a leveling course for Computer Science and Software Engineering Master's Degree students who need reinforcement of fundamental concepts.
+
+Topics include, but are not limited to, computer architecture and organization, analysis of algorithms, data structures, operating systems, discrete structures, automata theory and grammars.
+
+When your transcripts were reviewed by the Admissions Committee, it was determined that you were missing one or more foundation courses.
+
+In order to address this deficiency, you were given probationary admission with the condition of taking leveling course CSE 5305 - Foundations of Graduate Level Studies in Computer Science during your first semester.
+
+This course will prepare you for advanced graduate studies and will also count towards your degree.
+CSE 5305 is intended to be a review of these topics.
+
+If a given topic is not review for YOU, then you may want to request supplemental materials to understand the topic in more depth.
+
+You will be expected to complete exercises over each topic and you will be tested over each topic.
+
+This class is part of your degree and must be passed with a C or better.
+
+If you do not earn a C or better, then you will be required to take this class again next semester.
+
+Boolean is based around the logic that something is either True or False. Think of it like a light, it can either be on or off.
+
+Computers follow Boolean Logic as they can only have two states, True or False.
+
+Computers do not understand maybe, slightly or possible.
+
+In Boolean Logic, we use 1 to represent True and a 0 to represent False.
